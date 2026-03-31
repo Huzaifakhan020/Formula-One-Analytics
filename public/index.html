@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Analytics | Premium Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🏎️</div>
+                <div class="logo-text">
+                    <span class="logo-title">F1 Analytics</span>
+                    <span class="logo-subtitle">Premium Performance Data</span>
+                </div>
+            </div>
+            <div class="data-source">Powered by OpenF1</div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="drivers">🏆 Top 10 Drivers of All Time</button>
+            <button class="tab-btn" data-tab="cars">⚡ Top 5 Cars of All Time</button>
+            <button class="tab-btn" data-tab="normalizer">📊 Era Normalizer</button>
+            <button class="tab-btn" data-tab="current">🔥 2026 Season</button>
+        </div>
+
+        <div class="content">
+            <div id="drivers" class="tab-content active">
+                <div class="section-header">
+                    <h2>Greatest Drivers in F1 History</h2>
+                    <p>Ranked by championships, wins, and legacy</p>
+                </div>
+                <div class="stats-grid" id="drivers-grid"></div>
+            </div>
+
+            <div id="cars" class="tab-content">
+                <div class="section-header">
+                    <h2>Most Dominant Constructors</h2>
+                    <p>The machines that defined eras</p>
+                </div>
+                <div class="stats-grid" id="cars-grid"></div>
+            </div>
+
+            <div id="normalizer" class="tab-content">
+                <div class="section-header">
+                    <h2>Era Normalizer</h2>
+                    <p>Comparing drivers across different generations</p>
+                </div>
+                <div class="normalizer-container">
+                    <div class="normalizer-controls">
+                        <div class="input-group">
+                            <label>Select Driver 1</label>
+                            <select id="driver1-select"></select>
+                        </div>
+                        <div class="input-group">
+                            <label>Select Driver 2</label>
+                            <select id="driver2-select"></select>
+                        </div>
+                        <button id="compare-btn" class="compare-btn">Compare Drivers</button>
+                    </div>
+                    <div id="comparison-result" class="comparison-result"></div>
+                </div>
+            </div>
+
+            <div id="current" class="tab-content">
+                <div class="section-header">
+                    <h2>2026 Formula 1 Season</h2>
+                    <p>Current drivers and championship standings</p>
+                </div>
+                <div class="stats-grid" id="current-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
